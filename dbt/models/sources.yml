@@ -7,7 +7,6 @@ sources:
     tables:
       - name: gemeente
       - name: plaats
-      - name: Municipality_Data
   - name: cbs
     schema: cbs
     database: prod_sources
