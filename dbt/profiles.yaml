@@ -1,0 +1,23 @@
+config:
+  use_colors: True
+  send_anonymous_usage_stats: False
+
+bpd:
+  target: test
+  outputs:
+    defaults: &defaults
+      type: snowflake
+      account: ai43988.west-europe.azure
+      user: "{{ env_var('SNOWFLAKE_USER') }}"
+      password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+      role: sysadmin
+      warehouse: dev_wh
+      schema: star #DO NOT CHANGE
+      threads: 8 #Current snowflake default max
+      client_session_keep_alive: False
+    test:
+      << : *defaults
+      database: test_db
+    prod:
+      << : *defaults
+      database: prod_db

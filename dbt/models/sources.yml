@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: salesforce
+    schema: salesforce
+    database: prod_sources
+    tables:
+      - name: gemeente
+      - name: plaats
+      - name: Municipality_Data
+  - name: cbs
+    schema: cbs
+    database: prod_sources
+    tables:
+      - name: examples

@@ -1,0 +1,1 @@
+create or replace warehouse dev_wh with warehouse_size='SMALL';
